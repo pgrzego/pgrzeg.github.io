@@ -46,6 +46,21 @@ adder(2, 6);
 // > 8
 {% endhighlight %}
 
+{% highlight java linenos %}
+package jrpg;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class RestSpringBootJpaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(RestSpringBootJpaApplication.class, args);
+	}
+}
+{% endhighlight %}
+
 Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
 
 ### Gists via GitHub Pages
