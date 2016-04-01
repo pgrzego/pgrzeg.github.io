@@ -6,11 +6,13 @@ There are so many great tools available for any developer that it is hard to cho
 
 ### The very beginning: PSPad ###
 In the old days I had only three requirements for an editor:
+
 1. PHP syntax highlighting.
 2. Charset conversion (being Polish I had to struggle with ISO-8859-2, latin-2 and UTF-8).
 3. Built-in FTP client (so I was able to edit files directly on the server - totally unprofessional right now, but well... these were the times when I wasn't doing any serious projects... anyway I will cover that matter in a later post).
 
 That's it. I didn't want any other support. I felt like I was in total control of the code that way. My choice was [PSPad](http://www.pspad.com/) which was able to do all of that for me and then some: 
+
 * it was available in many languages, 
 * it had a portable settings file (in case I needed to reset my hard drive),
 * it had plug-ins (not that I was using any, but just in case).
@@ -24,6 +26,7 @@ The problem was I was still doing simple stuff - small websites with a simplifie
 I've had a break from web development and it seems I chose a bad time for that. My favourite PHP evolved a lot. Within few years it moved forward to support OOP much better with interfaces, namespaces and stuff. I had a lot to catch up.
 
 At the same time I've learned a lot about theory of software development. I became to understand how it really works when you are a part of the team who works on the same project and develops multiple functionalities at the same time. I've learned that on JAVA with firstly Eclipse and then [Intellij](https://www.jetbrains.com/idea/). I got used to these small yet powerful functionalities:
+
 * code completion,
 * hints,
 * quick help.
@@ -31,6 +34,7 @@ At the same time I've learned a lot about theory of software development. I beca
 Some argue that you can work without them. Or that they are available in lightweight editors as well. And they are right. [Sublime Text](https://www.sublimetext.com/) is a trending piece of software which is a perfect example of that. It is extensible, it has a great community to help you get started and customize it to fit your needs. 
 
 So why am I not using that? I chose to go with [PhpStorm](https://www.jetbrains.com/phpstorm/), because I wanted something ready, a piece of software that comes with all the functionalities built-in. Ready to go right after install process is done. The functionalities that I use regularly (on top of the ones mentioned earlier):
+
 * Built-in console.
 * Git versioning.
 * Templates to start your new project with (with Composer just in case you need one that is not in the menu).
