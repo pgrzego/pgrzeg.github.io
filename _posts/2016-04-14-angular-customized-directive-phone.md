@@ -14,24 +14,24 @@ There is a web page which is a showcase of mobile phone models. But the content 
 The module is designed as an Angular JS template. Which makes it easier later to reuse it in an HTML code. Here it is:
 
 ```html
-    <div class="col-lg-6 col-md-8">
-        <div class="panel panel-{{color}}">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <img height="128" src="{{photo}}"/>
-                    </div>
-                    <div class="col-xs-9">
-                        <h2>First place: <strong>{{model}}</strong></h2>
-                        <div>
-                            {{comment}}
-                        </div>
+<div class="col-lg-6 col-md-8">
+    <div class="panel panel-{{color}}">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <img height="128" src="{{photo}}"/>
+                </div>
+                <div class="col-xs-9">
+                    <h2>First place: <strong>{{model}}</strong></h2>
+                    <div>
+                        {{comment2}}
                     </div>
                 </div>
             </div>
-    
         </div>
+
     </div>
+</div>
 ```
 
 As you can see it uses [Boilerplate](https://getbootstrap.com/) and there are four variables:
