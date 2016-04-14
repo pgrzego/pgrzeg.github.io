@@ -57,6 +57,7 @@ What we need now is a directive to bind these two.
 ##The directive
 
 I'll start with a code and I will explain what it does right after:
+
 ```javascript
 app.directive('phone', ['dynamic', function(dynamic) {
   return {
