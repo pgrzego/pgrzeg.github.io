@@ -84,8 +84,6 @@ app.directive('phone', ['dynamic', function(dynamic) {
       $scope.comment2 = dynamic($scope.comment, fakeResponse.data.dynamic);
       console.log("Comment after 'dynamic' service is: " + $scope.comment);
     }
-
-
   }
 }]);
 ```
