@@ -63,7 +63,7 @@ What we need now is a directive to bind these two.
 
 I'll start with a code and I will explain what it does right after:
 
-```javascript
+{% highlight javascript linenos %}
 app.directive('phone', function() {
   return {
     restrict: 'E',
@@ -86,7 +86,7 @@ app.directive('phone', function() {
     }
   }
 });
-```
+{% endhighlight %}
 
 ### Restrict
 `restrict` 
