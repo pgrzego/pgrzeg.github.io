@@ -1,5 +1,9 @@
-// so that the line numbers are not selectable
-@mixin unselectable() {
+.highlight pre.lineno {
+  border: none;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+.highlight .lineno {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -7,36 +11,10 @@
   -ms-user-select: none;
   user-select: none;
 }
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
+.highlight .gutter {
+  border-right: 1px solid #ccc;
 }
-
-// having a lineno-container made it easier to style line number 
-// code blocks without impacting normal code blocks
-.lineno-container > figure > pre {
-  padding: 0px;
-}
-
-.highlight {
-  pre.lineno {
-    border: none;
-    @include opacity(0.6);  
-  }
-
-  .lineno {
-    @include unselectable();
-  }
-
-  .gutter {
-    border-right: 1px solid #ccc;
-  }
-
-  pre {
-    pre {
-      border: none;
-      margin-bottom: 0px;
-    }
-  }
+.highlight pre pre {
+  border: none;
+  margin-bottom: 0px;
 }
