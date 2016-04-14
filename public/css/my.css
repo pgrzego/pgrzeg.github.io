@@ -18,3 +18,10 @@
   border: none;
   margin-bottom: 0px;
 }
+.highlight pre code { 
+  overflow: auto;
+  -ms-word-wrap: normal;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  white-space: pre; 
+}
