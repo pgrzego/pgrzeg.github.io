@@ -5,11 +5,12 @@ tags: frontend, angularjs
 It seems that knowing `$scope` is the first step to understand **AngularJS**. One of the next ones is how to create your own **directive** which will turn a custom HTML tag into a complex HTML DOM structure. I've been assigned with a task like that. And it wasn't as easy as I expected, especially once I had to take a step towards even more complex use case. Let's start where I've started - from ready directive which was waiting for me to change it (well I won't be talking about the exact same case, but similar enough).
 
 ----------
-##The use case
+
+## The use case
 
 There is a web page which is a showcase of mobile phone models. But the content of each module depends on the user who is logged in. Let's say the selection and comments depend on whether you are a premium customer or not. 
 
-##The template
+## The template
 
 The module is designed as an Angular JS template. Which makes it easier later to reuse it in an HTML code. Here it is:
 
@@ -43,7 +44,7 @@ As you can see it uses [Boilerplate](https://getbootstrap.com/) and there are fo
 
 This one will be saved as `customTpl.html` (you will see this file name later in the directive).
 
-##HTML page
+## HTML page
 
 We can now use a custom HTML tag which will set all these parameters:
 
@@ -54,7 +55,7 @@ We can now use a custom HTML tag which will set all these parameters:
 These are hard coded, but later on we will learn how to get them dynamically via AJAX calls.
 What we need now is a directive to bind these two.
 
-##The directive
+## The directive
 
 I'll start with a code and I will explain what it does right after:
 
