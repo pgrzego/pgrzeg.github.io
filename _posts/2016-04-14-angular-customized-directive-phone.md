@@ -13,6 +13,7 @@ There is a web page which is a showcase of mobile phone models. But the content 
 
 The module is designed as an Angular JS template. Which makes it easier later to reuse it in an HTML code. Here it is:
 
+```html
     <div class="col-lg-6 col-md-8">
         <div class="panel panel-{{color}}">
             <div class="panel-heading">
@@ -31,6 +32,7 @@ The module is designed as an Angular JS template. Which makes it easier later to
     
         </div>
     </div>
+```
 
 As you can see it uses [Boilerplate](https://getbootstrap.com/) and there are four variables:
 
@@ -45,7 +47,9 @@ This one will be saved as `customTpl.html` (you will see this file name later in
 
 We can now use a custom HTML tag which will set all these parameters:
 
-    <phone model="X500" photo="http://icongal.com/gallery/download/179985/256/png" color="warning" comment="The biggest DPI makes its screen crystal clear."></phone>
+```html
+<phone model="X500" photo="http://icongal.com/gallery/download/179985/256/png" color="warning" comment="The biggest DPI makes its screen crystal clear."></phone>
+```
 
 These are hard coded, but later on we will learn how to get them dynamically via AJAX calls.
 What we need now is a directive to bind these two.
@@ -54,28 +58,36 @@ What we need now is a directive to bind these two.
 
 I'll start with a code and I will explain what it does right after:
 ```javascript
-    app.directive('phone', ['dynamic', function(dynamic) {
-      return {
-        restrict: 'E',
-        replace: true,
-        scope: {
-          'comment': '@',
-          'color': '@',
-          'photo': '@'
-        },
-        templateUrl: 'customTpl.html',
-        controller: function($scope) {
-          fakeResponse = {
-            "data": {
-              "success": true,
-              "data": "X300"
-            }
+app.directive('phone', ['dynamic', function(dynamic) {
+  return {
+    restrict: 'E',
+    replace: true,
+    scope: {
+      'comment': '@',
+      'brand': '@',
+      'color': '@',
+      'photo': '@'
+    },
+    templateUrl: 'customTpl.html',
+    controller: function($scope) {
+      fakeResponse = {
+        "data": {
+          "success": true,
+          "data": "X300",
+          "dynamic": {
+            "c1": "12",
+            "c2": "2"
           }
-          $scope.model = fakeResponse.data.data;
         }
-    
-    
       }
-    }]);
+      $scope.model = fakeResponse.data.data;
+      $scope.comment2 = dynamic($scope.comment, fakeResponse.data.dynamic);
+      console.log("Comment after 'dynamic' service is: " + $scope.comment);
+    }
+
+
+  }
+}]);
+```
 
 > Written with [StackEdit](https://stackedit.io/).
