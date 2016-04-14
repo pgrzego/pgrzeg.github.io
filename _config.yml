@@ -6,14 +6,14 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            Work in progress
+title:            Byte of cookie
 tagline:          'Work It Harder Make It Better Do It Faster, Makes Us Stronger'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:      'lessons learned during front-end and back-end programming'
 url:              http://pgrzego.github.io
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
+  photo:          https://gravatar.com/avatar/85bde35e8fc328484a646e60df56c5ea.jpg
   url:            https://twitter.com/mdo
 
 paginate:         5
