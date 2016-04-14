@@ -2,7 +2,11 @@
 title: Angular customized directive
 tags: frontend, angularjs
 ---
-It seems that knowing `$scope` is the first step to understand **AngularJS**. One of the next ones is how to create your own **directive** which will turn a custom HTML tag into a complex HTML DOM structure. I've been assigned with a task like that. And it wasn't as easy as I expected, especially once I had to take a step towards even more complex use case. Let's start where I've started - from ready directive which was waiting for me to change it (well I won't be talking about the exact same case, but similar enough).
+It seems that knowing `$scope` is the first step to understand **AngularJS**. One of the next ones is how to create your own **directive** which will turn a custom HTML tag into a complex HTML DOM structure. I've been assigned with a task like that. And it wasn't as easy as I expected, especially once I had to take a step towards even more complex use case. Let's start where I've started - from a ready directive which was waiting for me to change it (well I won't be talking about the exact same case, but similar enough).
+
+### Beforehand
+
+If you're not sure if you know enough about Angular JS, check out [Matthew Carriere's post "Controllers, Directives, and Services. AngularJS 101"](http://matthewcarriere.com/2015/01/13/controllers-directives-services-angularjs-101/).
 
 ----------
 
@@ -60,7 +64,7 @@ What we need now is a directive to bind these two.
 I'll start with a code and I will explain what it does right after:
 
 ```javascript
-app.directive('phone', ['dynamic', function(dynamic) {
+app.directive('phone', function() {
   return {
     restrict: 'E',
     replace: true,
@@ -75,19 +79,29 @@ app.directive('phone', ['dynamic', function(dynamic) {
       fakeResponse = {
         "data": {
           "success": true,
-          "data": "X300",
-          "dynamic": {
-            "c1": "12",
-            "c2": "2"
-          }
+          "model": "X300"
         }
       }
-      $scope.model = fakeResponse.data.data;
-      $scope.comment2 = dynamic($scope.comment, fakeResponse.data.dynamic);
-      console.log("Comment after 'dynamic' service is: " + $scope.comment);
+      $scope.model = fakeResponse.data.model;
     }
   }
-}]);
+});
 ```
+
+### Restrict
+`restrict` 
+
+
+
+
+
+
+## Further reading
+
+While working on this one I've stumbled across some very good questions and answers which were not directly related, but helped me expand my knowledge more:
+
+1. Should you need to notify Angular that the `scope` was updated which is somehow explained [here](https://stackoverflow.com/questions/16066170/angularjs-directives-change-scope-not-reflected-in-ui). 
+2. If you want to support default values and additional tags [this one](https://stackoverflow.com/questions/10629238/angularjs-customizing-the-template-within-a-directive) should be useful.
+3. [This plunker](http://jsbin.com/acibiv/4/edit) is a good example for recursive directives. I found it in the comments for [this post](https://sporto.github.io/blog/2013/06/24/nested-recursive-directives-in-angular/).
 
 > Written with [StackEdit](https://stackedit.io/).
