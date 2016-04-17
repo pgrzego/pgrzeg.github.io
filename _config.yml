@@ -16,7 +16,10 @@ author:
   photo:          https://gravatar.com/avatar/85bde35e8fc328484a646e60df56c5ea.jpg
   url:            https://twitter.com/mdo
 
-paginate:         5
+paginate: 5
+paginate_path: "blog/page:num"
+excerpt_separator: \n\n
+
 
 # Custom vars
 version:          2.1.0
