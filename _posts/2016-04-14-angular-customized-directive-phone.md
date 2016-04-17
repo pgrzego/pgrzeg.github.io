@@ -75,7 +75,7 @@ app.directive('phone', function() {
       'photo': '@'
     },
     templateUrl: 'customTpl.html',
-    controller: function(\$scope) {
+    controller: function($scope) {
       fakeResponse = {
         "data": {
           "success": true,
@@ -88,8 +88,6 @@ app.directive('phone', function() {
 });
 {% endhighlight %}
 
-### Restrict
-`Restrict` 
 
 ### Replace
 `Replace` let's us tell Angular to replace the element with the template that we are providing few lines below. In our case it means that the entire `<phone>` element will be removed and in its place there will be something else. Quick explanation about it can be found in [this answer on stackoverflow](http://stackoverflow.com/questions/27042336/basic-difference-between-transclude-true-and-replace-true-in-angular-js). There are more ways of how the final DOM will look like - `transclude` option is handy for that and [Eric Greene wrote an excellent post on that: Understanding Transclusion in AngularJS](https://www.accelebrate.com/blog/angularjs-transclusion-part-1/). 
@@ -99,7 +97,7 @@ Now this seemed to be like a separate branch of science. I've read a two pretty 
 
 I hope that after reading these you will be able to see what is happening here. We create an isolated `scope` which takes three values from the element's attributes. Two important factors which resulted in choosing `@` annotation:
 1. We will use these values only here in this directive. Even if we changed them here, we wouldn't need to inform controller about it. This means it is a one way binding where if controller changes the value, the directive will know about it, but not vice versa.
-2. We will use these values as strings. Even if they were declared as for example `color="{{$scope.variable_name}}"`, the directive would get only the resulting string which is stored by controller in `$scope.variable_name`.
+2. We will use these values as strings. Even if they were declared as for example `color="\{\{$scope.variable_name}}"`, the directive would get only the resulting string which is stored by controller in `$scope.variable_name`.
 
 Now since these values are retrieved, they become a part of our directive's scope and therefore are available to use inside our template. It is rendered in place of the custom HTML tag. Which is a nice way to simplify templates and make them more flexible.
 
