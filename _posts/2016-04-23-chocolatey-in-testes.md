@@ -1,0 +1,17 @@
+---
+title: Chocolatey in tests
+tags: tools
+layout: post
+---
+It seems that a tool similar to yum or apt-get has been developed for Windows. [It's called Chocolatey](https://chocolatey.org/) and is available to download with one command:
+
+{% highlight powershell %}
+
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+
+{% endhighlight %}
+
+
+I'll give it a try and will let you know if there are any pros or cons.
+
+> Written with [StackEdit](https://stackedit.io/).
