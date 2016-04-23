@@ -12,6 +12,7 @@ It seems that a tool similar to yum or apt-get has been developed for Windows. [
 {% endhighlight %}
 
 Having this you can install popular packages with simple command:
+
 **Ruby**
 
 {% highlight powershell %}
