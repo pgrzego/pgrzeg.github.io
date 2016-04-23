@@ -27,4 +27,12 @@ choco install nodejs -y
 
 I'll give it a try and will let you know if there are any pros or cons.
 
+[Update 2016-04-23]
+
+So far so good. To install Ruby DevKit I didn't have to go through [install steps described on the Git readme page](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit). Instead I might just run:
+
+{% highlight powershell %}
+choco install ruby2.devkit
+{% endhighlight %}
+
 > Written with [StackEdit](https://stackedit.io/).
