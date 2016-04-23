@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: tools
 title: My toolbox - IDE
 ---
 There are so many great tools available for any developer that it is hard to choose from. It takes a bit of time to play around with a new one to see if it suits your needs. And after you configure it and get used to it, it may be hard to check a new one as it will force you to change your habits. So for anyone who just sets up his/hers environment, here are is my toolbox and why I chose it:
