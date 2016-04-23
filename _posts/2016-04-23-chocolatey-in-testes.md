@@ -11,6 +11,18 @@ It seems that a tool similar to yum or apt-get has been developed for Windows. [
 
 {% endhighlight %}
 
+Having this you can install popular packages with simple command:
+**Ruby**
+
+{% highlight powershell %}
+choco install ruby -y
+{% endhighlight %}
+
+**NodeJS**
+
+{% highlight powershell %}
+choco install nodejs -y
+{% endhighlight %}
 
 I'll give it a try and will let you know if there are any pros or cons.
 
