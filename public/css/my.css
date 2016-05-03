@@ -1,8 +1,3 @@
-.highlight pre.lineno {
-  border: none;
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-}
 .highlight .lineno {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -13,16 +8,45 @@
 }
 .highlight .gutter {
   border-right: 1px solid #ccc;
+  padding: 0.1em;
+  width: 2.5em;
 }
-.highlight pre pre {
+.highlight pre.lineno {
   border: none;
-  margin-bottom: 0px;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  padding: 0;
+  word-break: keep-all;
+  font-size: 0.7rem;
 }
-.highlight pre .code { 
+.highlight pre .code, .highlight pre code { 
   overflow: auto;
   -ms-word-wrap: normal;
   word-wrap: normal;
   overflow-wrap: normal;
-  white-space: pre; 
   display: box;
+}
+.highlight pre .code pre, .highlight pre {
+  border: none;
+  margin-bottom: 0px;
+  font-size: 0.7rem;
+  word-break: normal;
+  padding: 0;
+}
+
+.highlight pre .code pre {
+  white-space: pre; 
+  overflow: scroll;
+  overflow-y: hidden;
+}
+
+.highlight>pre>code>table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.highlight>pre>code>table td.code {
+  /*overflow-x:auto;
+  display:block;
+  width:100%;*/
 }
