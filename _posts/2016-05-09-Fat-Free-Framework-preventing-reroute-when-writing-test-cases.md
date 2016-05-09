@@ -23,8 +23,16 @@ $f3->set('ONREROUTE',function($url,$permanent){
 Now I can test if after the tested method was processed, the `$reroute` variable holds a url of a site that the method wante to redirect to:
 
 {% highlight php %}
+/** @var Base $f3 */
+$f3 = require("internal.php");
+// Define a routing rule:
+$f3->route('GET /user','User->display');
 
 $test = new Test;
+// Execute a test case:
+ob_start();
+$f3->mock('GET /user');
+ob_end_clean();
 
 $test->expect( $reroute=="/", "Module redirects correctly user who is not logged.");
 
