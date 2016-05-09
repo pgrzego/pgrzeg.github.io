@@ -11,10 +11,21 @@ It starts with a check on whether there is a handler defined! This was this mome
 
 {% highlight php %}
 
+$reroute = "";
+
 $f3->set('ONREROUTE',function($url,$permanent){
+    $GLOBALS["reroute"] = $url;
     return true;
 });
 
 {% endhighlight %}
 
-Problem solved.
+Now I can test if after the tested method was processed, the `$reroute` variable holds a url of a site that the method wante to redirect to:
+
+{% highlight php %}
+
+$test = new Test;
+
+$test->expect( $reroute=="/", "Module redirects correctly user who is not logged.");
+
+{% endhighlight %}
