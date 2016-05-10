@@ -37,3 +37,26 @@ ob_end_clean();
 $test->expect( $reroute=="/", "Module redirects correctly user who is not logged.");
 
 {% endhighlight %}
+
+### Update
+There is one flaw with this approach - if I override `reroute` function with my custom one, then I don't kill original script. So if originally I assumed that Fat Free Framework kills it inside its `reroute` function (and it does in the end), then I ended up with my method looking like this:
+
+{% highlight php %}
+
+private function validateUser($f3) {
+	// Perform a validation based on session, headers or any other solution
+	if ( !$logged ) $f3->reroute("/");
+}
+
+private function display($f3) {
+	$this->validateUser($f3);
+
+	// And here all the stuff is done assuming 
+	// that user is logged in as otherwise 
+	// the reroute function would be executed 
+	// which in the end kills this process 
+}
+
+{% endhighlight %}
+
+In this case I have a problem. Because if I will overwrite `reroute` function, my `display` function will not be stopped if user is not logged in. Instead it will firstly do all the validation, but later it will proceed to do all the other things that are declared later. I can't see any good solution out of this problem - the only thing that can be done here is to either let function execute the remaining part of the code (which may cause some unexpected behaviour like executing DB queries with random data) or change the original code of the method which is against the policy "if it works, don't touch it". I am going to go with the second option.
