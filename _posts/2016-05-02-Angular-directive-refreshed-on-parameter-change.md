@@ -4,7 +4,7 @@ tags: angular frontend
 layout: post
 ---
 I'm using a [SB Admin Angular template](http://startangular.com/product/sb-admin-angular-theme/) to create a dashboard. The main page displays few simple indicators. The data for them is retrieved with an AJAX query calling a RESTful web service. It's all working very well. What I needed to do now was to enhance it - user was supposed to be able to change the date range and each time some of the indicators were supposed to change their values to reflect the time period.
-
+<!--more-->
 Here is [the working plunker](https://plnkr.co/edit/a9Kj9Kar2maZ2m9dfaNL) to show you an example of how to tackle this requirement. And below I will briefly explain what is happening.
 
 #### index.html
