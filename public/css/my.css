@@ -21,8 +21,8 @@
 }
 .highlight pre .code, .highlight pre code { 
   overflow: auto;
-  -ms-word-wrap: normal;
-  word-wrap: normal;
+  -ms-word-wrap: initial;
+  word-wrap: initial;
   overflow-wrap: normal;
   display: box;
 }
