@@ -40,7 +40,7 @@ angular
 
 ### HTML
 
-{% highlight html %}
+{% highlight html %}{% raw %}
 <!DOCTYPE html>
 <html>
 
@@ -58,6 +58,6 @@ angular
   </body>
 
 </html>
-{% endhighlight %}
+{% endraw %}{% endhighlight %}
 
 And [the plunker file to play with](https://plnkr.co/edit/u8YBSN).
