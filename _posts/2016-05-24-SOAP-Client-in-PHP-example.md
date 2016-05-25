@@ -31,6 +31,7 @@ In order to be able to create a SOAP client you should get:
 I needed more than a standard PHP library was offering. I wanted to the SOAP client to log its activities and I wanted to cache XML requests and responses for troubleshooting. Therefore I've created my own class:
 
 {% highlight php %}
+<?php
 class LocalSoapClient extends SoapClient {
 
     private $logger;
@@ -47,7 +48,7 @@ class LocalSoapClient extends SoapClient {
     }
 
     function __doRequest($request, $location, $action, $version, $one_way = 0) {
-        $this->logger->write(__METHOD__." sending a SOAP request to AAA.");
+        $this->logger->write(__METHOD__." sending a SOAP request.");
         // Intercepting to store request and response:
         $timestamp = str_replace(".", "", microtime(true));
         file_put_contents("logs/soap/soap-query-".$timestamp.".xml", str_replace('><', '>'."\n\r".'<', $request));
@@ -92,6 +93,7 @@ xmlns:ns3="http://www.example.com/product/schemas">
 Let's make it happen in PHP.
 
 {% highlight php %}
+<?php
 $logger = new Log('SOAPLog.log');
 
 $client = new LocalSoapClient(
@@ -107,6 +109,7 @@ $client = new LocalSoapClient(
 Now it's time to define headers. There are three with company_id, client_id and client_password. Each operates on the same namespace, so I defined one which will be added in the Envelope as you will see later on:
 
 {% highlight php %}
+<?php
 // Define namespace:
 $ns_s = 'http://web.example.com';
 // Define headers which will use this namespace:
@@ -119,6 +122,7 @@ $client->__setSoapHeaders(array($h1, $h2, $h3));
 And finally the `Body` part. This one is made in SOAP as a method (in this example it is `WS_Get_Info_By_ID`) which needs a `stdClass` object with property `id` as a parameter. This is going to be a product which I want to enquire the SOAP server about.
 
 {% highlight php %}
+<?php
 $obj = new \stdClass();
 $obj->id = "99ABC50";
 
@@ -129,6 +133,7 @@ $ret = $client->WS_Get_Info_By_ID($obj);
 Finally, it's good to see if there was no error returned (for example wrong authentication):
 
 {% highlight php %}
+<?php
 if (is_soap_fault($ret)) {
     $this->logger->write(__METHOD__." ERROR: SOAP Fault: (faultcode: {$ret->faultcode}, faultstring: {$ret->faultstring})");
 }
