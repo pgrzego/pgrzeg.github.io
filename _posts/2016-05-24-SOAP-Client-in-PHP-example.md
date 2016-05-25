@@ -123,7 +123,7 @@ $obj = new \stdClass();
 $obj->id = "99ABC50";
 
 $this->logger->write(__METHOD__." Making a query...");
-$ret = $client->WS_Get_Info_By_ID($immat);
+$ret = $client->WS_Get_Info_By_ID($obj);
 {% endhighlight %}
 
 Finally, it's good to see if there was no error returned (for example wrong authentication):
@@ -146,7 +146,7 @@ Upon execution of these lines, my instance of a custom SOAP Client class should 
 </env:Header>
 <env:Body>
 <ns1:WS_Get_Info_By_ID>
-<ns1:immat>99ABC50</ns1:immat>
+<ns1:id>99ABC50</ns1:id>
 </ns1:WS_Get_Info_By_ID>
 </env:Body>
 </env:Envelope>
