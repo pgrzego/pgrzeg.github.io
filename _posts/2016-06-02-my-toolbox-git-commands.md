@@ -7,7 +7,7 @@ Git is a very easy way to store and synchronize repositories. I use mostly [Bitb
 <!--more-->
 
 ### The workflow
-Firstly [there is a workflow](https://www.atlassian.com/git/tutorials/comparing-workflows). It describes the process of how to use Git: when to create branches, what is stored where, etc. I usually prefer [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). I advice any beginner to read through this description and choose a workflow which suits your needs.
+Firstly [there is a workflow](https://www.atlassian.com/git/tutorials/comparing-workflows). It describes the process of how to use Git: when to create branches, what is stored where, etc. I usually prefer [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). I advise any beginner to read through this description and choose a workflow which suits your needs.
 
 The one I use has the following advantages:
 
@@ -57,7 +57,7 @@ git branch -d newBranchName
 
 ### Other useful tips
 
-When you are on Windows and you use SourceTree which ships with git.exe file, you may wish to use it instead of installing a stand alone copy. [How to use SourceTree embedded Git/Mercurial on command line](http://www.geekality.net/2015/01/13/how-to-use-sourcetree-embedded-gitmercurial-on-command-line/) describes what you should do to configure Windows to see this file.
+When you are on Windows and you use SourceTree which ships with git.exe file, you may wish to use it instead of installing a standalone copy. [How to use SourceTree embedded Git/Mercurial on command line](http://www.geekality.net/2015/01/13/how-to-use-sourcetree-embedded-gitmercurial-on-command-line/) describes what you should do to configure Windows to see this file.
 
 [Tobias Kraze](http://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote) gives a tip on how to delete a remote branch: 
 
@@ -71,7 +71,7 @@ If you work with a frontend code which you minify/uglify before deployment and y
 git subtree push --prefix dist origin release
 {% endhighlight %}
 
-*-Hey, can you check something on branch fix211?* I can hear once in a while, of course usually when I'm in the middle of something, but at the same time when it is not yet ready to be committed. Stashing your changes come in usufeul then:
+*-Hey, can you check something on branch fix211?* I can hear once in a while, of course usually when I'm in the middle of something, but at the same time when it is not yet ready to be committed. Stashing your changes come in useful then:
 
 {% highlight bash %}
 git stash
