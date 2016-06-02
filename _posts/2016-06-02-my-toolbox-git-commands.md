@@ -70,3 +70,13 @@ If you work with a frontend code which you minify/uglify before deployment and y
 {% highlight bash %}
 git subtree push --prefix dist origin release
 {% endhighlight %}
+
+*-Hey, can you check something on branch fix211?* I can hear once in a while, of course usually when I'm in the middle of something, but at the same time when it is not yet ready to be committed. Stashing your changes come in usufeul then:
+
+{% highlight bash %}
+git stash
+git checkout fix211
+# Checking what is happening
+git checkout myBranch
+git stash pop
+{% endhighlight %}
