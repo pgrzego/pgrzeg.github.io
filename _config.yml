@@ -15,6 +15,11 @@ baseurl:          /
 author:
   photo:          https://gravatar.com/avatar/85bde35e8fc328484a646e60df56c5ea.jpg
   url:            https://twitter.com/mdo
+  github:         pgrzego
+  linkedin:       piotrgrzegorzewski
+  stackoverflow:
+    name:         george007
+    id:           5854688
 
 paginate: 5
 paginate_path: "blog/page:num"

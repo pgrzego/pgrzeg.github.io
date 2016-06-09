@@ -50,3 +50,42 @@
   display:block;
   width:100%;*/
 }
+
+.sidebar-footer ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.sidebar-footer ul li {
+  display: inline-block;
+  margin: 5px;
+}
+
+.sidebar-footer ul li a {
+  background: #dfdfdf none repeat scroll 0 0;
+  border-radius: 50%;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  width: 40px;
+}
+
+.sidebar-footer ul li a span.username {
+  display: none;
+}
+
+.portfolio {
+  width: 100%;
+  background-color: #FFDE00;
+  padding: 10px;
+}
+
+.portfolio img {
+  margin: 0 auto; 
+}
+
+p img {
+  float:right;
+  clear: right;
+}
