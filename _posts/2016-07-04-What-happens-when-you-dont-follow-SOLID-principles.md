@@ -4,10 +4,10 @@ tags: tools
 title: What happens when you don't follow SOLID principles
 comments: true
 ---
-[SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles are here to help us, programmers, to write a clean code. All of them are more like guidlines as really the code will work even if they are not stricly followed. And there is this ["Done is better than perfect"](http://lifehacker.com/5870379/done-is-better-than-perfect) rule as well. But the truth is that the more you will follow SOLID, the less painfull refactoring will be for you. Let's see an example of that.
+[SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)) principles are here to help us, programmers, to write a clean code. All of them are more like guidelines as really the code will work even if they are not strictly followed. And there is this ["Done is better than perfect"](http://lifehacker.com/5870379/done-is-better-than-perfect) rule as well. But the truth is that the more you will follow SOLID, the less painful refactoring will be for you. Let's see an example of that.
 <!--more-->
 
-*Sidenote:* Since only an explanataion of the current, faulty implementation has grown into a regular post, I will describe ways to fix it in the following parts.
+*Side note:* Since only an explanation of the current, faulty implementation has grown into a regular post, I will describe ways to fix it in the following parts.
 
 ### Example: a class to manage mailing
 
@@ -57,7 +57,7 @@ This one doesn't have to blow up in my face quickly, but there is also a room fo
 
 ### Retrieve data to fill into the template
 
-The next step is to retrieve a list of users who are eligible to receive a mailing together with all the variables that will be set in the template. In my implementation all the info needed to get that list was kept in the local database. So getting this was as simple as running a dedicated query. And at this point already we can see that this implementation has he same problem as the one in a previous step - it is dependant on the provider yet it doesn't have an adapter.
+The next step is to retrieve a list of users who are eligible to receive a mailing together with all the variables that will be set in the template. In my implementation all the info needed to get that list was kept in the local database. So getting this was as simple as running a dedicated query. And at this point already we can see that this implementation has the same problem as the one in a previous step - it is dependent on the provider yet it doesn't have an adapter.
 
 In order to keep the SQL queries outside of the main mailing class, I have created a different one to store them. The link between a template and its corresponding query is kept in the array described above (with `'query' => MailingQueries::SAMPLE_QUERY`). Getting the query is illustrated as actions **5** and **6** of the UML file. The query needs to return values with keys that correspond to template's variables. So when a template is like this:
 
@@ -85,15 +85,15 @@ This solution worked as long as the queries were simple. But I've just been aske
 
 ### Render the template
 
-This step is very similar to a **Retrieve the template params**. Having all the variable values, I ask the template engine to render the template and I expect a body of the email in response. As it is similar to one of the previous steps, it also shares its flaw: it is dependend on the provider. On top of that, the way this process is designed, forces controller to render the body even though it shouldn't be doing that. But that's for later.
+This step is very similar to a **Retrieve the template params**. Having all the variable values, I ask the template engine to render the template and I expect a body of the email in response. As it is similar to one of the previous steps, it also shares its flaw: it is dependent on the provider. On top of that, the way this process is designed, forces controller to render the body even though it shouldn't be doing that. But that's for later.
 
 ### Dump the mail info
 
-This is the last step - action **11** of the UML file. The idea is that the process of sending an unknown number of emails may take some time. Therefore I wanted to seperate it from the process of preparing mails. In this step I take each rendered body of the mail and I put it together with all other parameters (receiver and subject of the mail) to a text file. The other process will take these mails on a regular basis one by one and will be sending them.
+This is the last step - action **11** of the UML file. The idea is that the process of sending an unknown number of emails may take some time. Therefore, I wanted to separate it from the process of preparing mails. In this step I take each rendered body of the mail and I put it together with all other parameters (receiver and subject of the mail) to a text file. The other process will take these mails on a regular basis one by one and will be sending them.
 
 ### Summary
 
-I've covered the process of sending mailings as it was designed initially. The process was working correctly, but had some limitations which became probmematic sooner than I expected. And since the design did not follow the SOLID principles, I need now to refactor it. I will try to address each of the exposed flaws and then some as the fixes will impact the overall architecture which will need to be rewritten almost from the scratch. I will describe it in the following posts.
+I've covered the process of sending mailings as it was designed initially. The process was working correctly, but had some limitations which became problematic sooner than I expected. And since the design did not follow the SOLID principles, I need now to refactor it. I will try to address each of the exposed flaws and then some as the fixes will impact the overall architecture which will need to be rewritten almost from the scratch. I will describe it in the following posts.
 
 ----------
 UML diagram was made with [PlantUML](http://plantuml.com)
