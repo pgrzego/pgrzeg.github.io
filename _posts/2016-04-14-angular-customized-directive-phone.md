@@ -2,6 +2,7 @@
 title: Angular customized directive
 tags: frontend angularjs
 layout: post
+comments: true
 ---
 It seems that knowing `$scope` is the first step to understand **AngularJS**. One of the next ones is how to create your own **directive** which will turn a custom HTML tag into a complex HTML DOM structure. I've been assigned with a task like that. And it wasn't as easy as I expected, especially once I had to take a step towards even more complex use case. Let's start where I've started - from a ready directive which was waiting for me to change it (well I won't be talking about the exact same case, but similar enough). In one of the following posts I will describe what I did to answer additional requirement to introduce variables inside `comment` attribute.
 <!--more-->

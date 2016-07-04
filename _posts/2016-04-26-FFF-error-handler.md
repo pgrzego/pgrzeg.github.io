@@ -2,6 +2,7 @@
 title: Fat Free Framework error handler
 tags: php
 layout: post
+comments: true
 ---
 [Official documentation for Fat Free Framework](http://fatfreeframework.com/framework-variables#AbouttheF3ErrorHandler) (in the version available at the day of writing this post) doesn't mention a very useful thing when creating a custom error handler (at least for me that is) - that you can pass additional parameters to the lambda expression. 
 <!--more-->

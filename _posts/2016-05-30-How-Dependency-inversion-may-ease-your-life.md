@@ -2,6 +2,7 @@
 title: How Dependency inversion may ease your life
 tags: php backend solid
 layout: post
+comments: true
 ---
 Recently I wanted to improve the way I store logs in my solution and I've encountered a problem. Why? Because even though I always try to keep my code as clean as it's reasonable, there is always a way to do it better. This time it was a case of ignored [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle). Most of the modules I create is equipped with a logger. I want to be able to trace the problems and I also want to be able to reply to users about what might have happened when they have encountered some difficulties while using the web service. Since I am using [Fat Free Framework](http://fatfreeframework.com/) it was only natural to rely on [its built-in logger](http://fatfreeframework.com/log).
 <!--more-->

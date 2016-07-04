@@ -2,6 +2,7 @@
 title: Chocolatey in tests
 tags: tools
 layout: post
+comments: true
 ---
 It seems that a tool similar to yum or apt-get has been developed for Windows. [It's called Chocolatey](https://chocolatey.org/) and is available to download with one command:
 

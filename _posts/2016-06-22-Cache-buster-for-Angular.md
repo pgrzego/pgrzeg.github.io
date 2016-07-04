@@ -2,6 +2,7 @@
 layout: post
 tags: angular frontend
 title: Cache buster for Angular
+comments: true
 ---
 Every time there is an update of our Angular application, there is a need to force users' browsers to pull new versions of the files. And it's not as easy as it seems.
 <!--more-->

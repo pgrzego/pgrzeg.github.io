@@ -2,6 +2,7 @@
 title: SOAP Client in PHP - example
 tags: PHP backend
 layout: post
+comments: true
 ---
 I'm used to connect to other services through RESTful protocol. But there are other ways and recently I had to create an adapter which would send a request to a SOAP server and get its response. There is more to read about the protocol and [you can read about it on a Wikipedia](https://en.wikipedia.org/wiki/SOAP). I will explain it in few points quick points and I will let you go through an example which let me get my job done.
 <!--more-->

@@ -2,6 +2,7 @@
 title: Angular - filter to shorten numbers
 tags: angular frontend
 layout: post
+comments: true
 ---
 I needed to fit bigger numbers into a small space on the website, so I've created a handy filter which checks how big the number is and if it can be shortened, it does that by dividing it and adding appropriate suffix (like 'k' or 'M'). The filter accepts a parameter to define the precision of the final number.
 <!--more-->

@@ -2,6 +2,7 @@
 title: Fat Free Framework - preventing reroute when writing test cases
 tags: PHP backend
 layout: post
+comments: true
 ---
 There are sometimes these small things which can make your life miserable. But then when you stumble upon one you see that the problem has been identified by the makers and it is easily manageable. And you're grateful that it's done and you don't need to figure out how to resolve it without tickering with the source code.
 

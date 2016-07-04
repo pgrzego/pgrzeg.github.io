@@ -2,6 +2,7 @@
 layout: post
 tags: tools
 title: My toolbox - git commands
+comments: true
 ---
 Git is a very easy way to store and synchronize repositories. I use mostly [Bitbucket](https://bitbucket.org/) as this one has a functionality to keep your repository private. I've learned some really useful things you can do with it and I wanted to put them here for me and for others.
 <!--more-->
