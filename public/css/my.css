@@ -75,17 +75,11 @@
   display: none;
 }
 
-.portfolio {
-  width: 100%;
-  background-color: #FFDE00;
-  padding: 10px;
-}
-
-.portfolio img {
-  margin: 0 auto; 
-}
-
-p img {
+p img.portfolio {
   float:right;
   clear: right;
+}
+
+blockquote {
+  text-align: left;
 }
