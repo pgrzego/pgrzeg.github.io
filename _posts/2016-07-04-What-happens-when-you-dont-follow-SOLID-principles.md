@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: tools
+tags: backend solid
 title: What happens when you don't follow SOLID principles
 comments: true
 ---
