@@ -9,4 +9,4 @@ PHP has two built-in methods which handle MIME base64 encoding and decoding: [ba
 
 The answer to the above question is not that hard. PHP gives us a string which is a collection of chars. Each char can be converted to an integer with the [ord method](https://secure.php.net/manual/en/function.ord.php). Its range is 0 to 255. Which means what I needed to do is to change the base of the value I wante to encode from 10 to 256 (by dividing it by 256 and checking the division's remaining value) while encoding or do the opposite while decoding. Here is the code:
 
-{% gist cbd01c0ae8142299346a2af824f042f8 %}
+{% gist ee25f8589539dbd297ba051ca45c48e9 %}
