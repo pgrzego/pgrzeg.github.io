@@ -5,7 +5,7 @@ title: Portfolio
 
 ## Nasze-bieganie.pl
 
-![Nasze-bieganie.pl](http://rzulty.pl/img/portfolio/nasze-bieganie.jpg "Nasze-bieganie.pl")
+![Nasze-bieganie.pl](http://rzulty.pl/img/portfolio/nasze-bieganie.jpg "Nasze-bieganie.pl"){: .portfolio}
 
 Social portal for running enthusiasts.
 
@@ -15,7 +15,7 @@ Functionalities: running scheduler, stats comparison tool, forum, charts, photo 
 
 ## Musikom
 
-![Musikom](http://rzulty.pl/img/portfolio/musikom.jpg "Musikom")
+![Musikom](http://rzulty.pl/img/portfolio/musikom.jpg "Musikom"){: .portfolio}
 
 Website presenting a company who facilitates contacts with French artists.
 
@@ -25,7 +25,7 @@ Multiple options to present company's activities: news, photo gallery, offer des
 
 ## Studium sp. z o. o.
 
-![Studium sp. z o. o.](http://rzulty.pl/img/portfolio/studium.jpg "Studium sp. z o. o.")
+![Studium sp. z o. o.](http://rzulty.pl/img/portfolio/studium.jpg "Studium sp. z o. o."){: .portfolio}
 
 Originally presented portfolio of a Warsaw architectural design studio Studium.
 
@@ -35,7 +35,7 @@ Projects are laid on a horizontally scrollable ribbon. Each one is then loaded o
 
 ## JKF Sp. z o.o.
 
-![JKF Sp. z o.o.](http://rzulty.pl/img/portfolio/jkf.jpg "JKF Sp. z o.o.")
+![JKF Sp. z o.o.](http://rzulty.pl/img/portfolio/jkf.jpg "JKF Sp. z o.o."){: .portfolio}
 
 Webpage of a JKF company presenting their comprehensive services in the area of wealth management in a clean and simple way.
 
@@ -45,7 +45,7 @@ Tailored CMS allows not only to manage the content. It was enriched with specifi
 
 ## Saamba
 
-![Saamba](http://rzulty.pl/img/portfolio/saamba.jpg "Saamba")
+![Saamba](http://rzulty.pl/img/portfolio/saamba.jpg "Saamba"){: .portfolio}
 
 Social portal for Students and Alumni Association of Warsaw University of Technology Business School.
 
@@ -55,7 +55,7 @@ Open source CMS customized and enriched to meet customer's needs with regards to
 
 ## Creative Dream
 
-![Creative Dream](http://rzulty.pl/img/portfolio/creativedream.jpg "Creative Dream")
+![Creative Dream](http://rzulty.pl/img/portfolio/creativedream.jpg "Creative Dream"){: .portfolio}
 
 A colorful and dynamic webpage of a company arranging events.
 
@@ -63,7 +63,7 @@ Available in two languages, rich in functionalities - photo gallery, animated po
 
 ## Red River Flame
 
-![Red River Flame](http://rzulty.pl/img/portfolio/redriverflame.jpg "Red River Flame")
+![Red River Flame](http://rzulty.pl/img/portfolio/redriverflame.jpg "Red River Flame"){: .portfolio}
 
 Website for a Nova Scotia Duck Trolling Retrievers owner.
 
