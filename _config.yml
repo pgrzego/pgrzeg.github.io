@@ -9,8 +9,8 @@ permalink:        pretty
 title:            Byte of cookie
 tagline:          'Work It Harder Make It Better Do It Faster, Makes Us Stronger'
 description:      'lessons learned during front-end and back-end programming'
-url:              http://pgrzego.github.io
-baseurl:          http://pgrzego.github.io/
+url:              https://pgrzego.github.io
+baseurl:          https://pgrzego.github.io/
 
 author:
   photo:          https://gravatar.com/avatar/85bde35e8fc328484a646e60df56c5ea.jpg
